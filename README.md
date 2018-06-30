@@ -22,4 +22,4 @@ Click on the Color button to change the color
 
 This site was created by Eunice Patricia Aber with help from the Google Africa Challenge and Andela Learning Community.
 
-Find Eunice on Github at https://github.com/eaber155
+You can find the site on the following link: https://eaber155.github.io/PixelArtMarkerEunice/
