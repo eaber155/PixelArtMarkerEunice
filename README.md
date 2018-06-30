@@ -8,7 +8,7 @@ Feel at home as we check you in and show you how to navigate our simple site.
 
 ## Instructions
 
-To create a grid, enter the row height and the width and then hit submit. You'll see a grid below the words "Design Canvas".
+To create a grid, enter the height and the width and then hit submit. You'll see a grid below the words "Design Canvas".
 
 Click on a cell to add color to it and click again to remove color from it.
 
