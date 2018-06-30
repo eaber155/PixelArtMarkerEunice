@@ -1,16 +1,25 @@
 # Pixel Art Maker Project
 
-## Table of Contents
+## Welcome
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+Welcome to "Pixel Art Marker by Eunice", the best pixel art maker in the world! 
+
+Feel at home as we check you in and show you how to navigate our simple site.
 
 ## Instructions
 
-To get started, open `designs.js` and start building out the app's functionality.
+To create a grid, enter the row height and the width and then hit submit. You'll see a grid below the words "Design Canvas".
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Click on a cell to add color to it and click again to remove color from it.
+
+Use the "Clear Color" button to remove color from the entire grid.
+
+Use the "Remove Grid" button to remove the entire grid.
+
+Click on the Color button to change the color
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This site was created by Eunice Patricia Aber with help from the Google Africa Challenge and Andela Learning Community.
+
+Find Eunice on Github at https://github.com/eaber155

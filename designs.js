@@ -2,6 +2,9 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
+
+var height, width, colorSelected;
+
 document.body.style.backgroundImage = 'url("images/background_one.jpg")';
 
 window.onload = function(){
@@ -14,9 +17,6 @@ window.onload = function(){
 	window.setInterval(changeBackgroundImage, 5000);
 }
 
-//var inputHeight = ('#inputHeight').val();
-//var inputWeight = ('#inputWeight').val();
-
 $('#sizePicker').submit(function(event){
 	event.preventDefault();
 	const height = $('#inputHeight').val();
@@ -25,49 +25,35 @@ $('#sizePicker').submit(function(event){
 });
 
 
+$('#removeGrid').on('click', function(event){
+	event.preventDefault();
+	$('#pixelCanvas').html(""); 	
+});
+
 function makeGrid(x, y) {
 	var gridMarkup = "";
 
 	for (var i = 0; i < x; i++) {
 		gridMarkup += "<tr>";
 		for (k = 0; k <y; k++) {
-			gridMarkup += "<td>&nbsp;</td>";
+			gridMarkup += "<td></td>";
 		}
 		gridMarkup += "</tr>";	
 	}
 
 	$("#pixelCanvas").html(gridMarkup)
+
+	$('td').click(function addColor(){		
+	colorSelected = $('#colorPicker').val();
+	if($(this).attr('style')){
+		$(this).removeAttr('style');
+	}else{
+		$(this).attr('style', 'background-color:'+colorSelected);
+	}
+});
 }
 
-/**var height, width, color;
-
-$('#pixelCanvas').empty();
-   event.preventDefault();
-   const height = $('#inputHeight').val();
-   const width = $('#inputWidth').val();
-   makeGrid(height, width);
-})
-
-function makeGrid(x, y) {
-
- // Your code goes here!
- for (var i = 1; i <= x; i++) {
-     $('#pixelCanvas').append('<tr id=table' + i + '></tr>');
-     for (var j = 1; j <=y; j++) {
-         $('#table' + i).append('<td></td>');
-       }
-   }
-   // add colors to the cells
-   $('td').click(function addColor(){
-       color = $('#colorPicker').val();
-
-       if ($(this).attr('style')) {
-           $(this).removeAttr('style')
-       } else {
-           $(this).attr('style', 'background-color:' + color);
-       }
-   })
-
-}*/
-
-//document.body.style.backgroundImage = 'url("background_one.jpg")';
+$('#clearColor').on('click', function(event){
+	event.preventDefault();
+	$('td').removeAttr('style');
+});
